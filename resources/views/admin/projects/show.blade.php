@@ -20,7 +20,7 @@
                         <img class="cover_project_image" src="{{ $project->cover_project_image }}"
                             alt="{{ $project->name }}">
                     @else
-                        <img class="cover_project_image" src="{{ asset('./storage/' . $project->cover_project_image) }}"
+                        <img class="cover_project_image" src="{{ asset('storage/' . $project->cover_project_image) }}"
                             alt="{{ $project->name }}">
                     @endif
                 </div>
