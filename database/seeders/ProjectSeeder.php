@@ -23,7 +23,8 @@ class ProjectSeeder extends Seeder
             $project->description = $faker->text(500);
             $project->slug = Str::slug($project->name, '-');
             $project->start_date = $faker->date();
-            $project->end_date = $faker->date();
+            $project->end_date = $faker->dateTimeBetween($project->start_date, 'now +2 years')->format('Y-m-d');
+
 
             $project->save();
         }

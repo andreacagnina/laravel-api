@@ -42,6 +42,7 @@ class StoreProjectRequest extends FormRequest
             'description.max' => 'Superato il numero massimo di caratteri (500)',
             'start_date.required' => 'Data obbligatoria',
             'end_date.required' => 'Data obbligatoria',
+            'end_date.after_or_equal' => 'La data di fine deve essere successiva o uguale alla data di inizio',
             'cover_project_image.image' => 'Il file deve essere un file immagine',
             'cover_project_image.max' => 'Il file non deve superare i 4 MB',
             'type_id.exists' => 'Questa categoria non esiste',
