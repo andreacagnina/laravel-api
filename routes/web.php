@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\FilterTypeController as FilterTypeController;
 use App\Http\Controllers\Admin\TypeController as TypeController;
 use App\Http\Controllers\Admin\TechnologyController as TechnologyController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

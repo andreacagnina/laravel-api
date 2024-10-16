@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/project', [ProjectController::class, 'index'])->name('projects');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+Route::get('/project/{slug}', [ProjectController::class, 'show'])->name('project');

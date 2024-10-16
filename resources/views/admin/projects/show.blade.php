@@ -27,7 +27,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <div class="contant">
+                    <div class="content">
                         <table class="table table-bordered align-middle table-sm mt-3">
                             <thead>
                                 <tr>
