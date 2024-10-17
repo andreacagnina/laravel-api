@@ -26,7 +26,7 @@ class StoreLeadRequest extends FormRequest
         return [
             'name' => 'required|max:50',
             'surname' => 'required|max:50',
-            'email' => 'required|max:50',
+            'email' => 'required|email|max:50',
             'message' => 'required|max:500',
         ];
     }
@@ -36,6 +36,7 @@ class StoreLeadRequest extends FormRequest
             'name.required' => 'Nome obbligatorio',
             'surname.required' => 'Cognome obbligatorio',
             'email.required' => 'Email obbligatorio',
+            'email.email' => 'Formato non accettato',
             'message.required' => 'Contenuto obbligatorio',
             'name.max' => 'Superato il numero massimo di caratteri :max',
             'surname.max' => 'Superato il numero massimo di caratteri :max',
