@@ -10,9 +10,9 @@
             </div>
             <div class="col-12">
                 <div class="content">
-                    <p><strong>Nome Completo: </strong> {{ $contact->name }} {{ $contact->surname }}</p>
-                    <p> <strong>Email: </strong> {{ $contact->email }}</p>
-                    <p> <strong>Messaggio: </strong> {{ $contact->message }}</p>
+                    <p><strong>Nome Completo: </strong> {{ $lead->name }} {{ $lead->surname }}</p>
+                    <p> <strong>Email: </strong> {{ $lead->email }}</p>
+                    <p> <strong>Messaggio: </strong> {{ $lead->message }}</p>
                 </div>
             </div>
         </div>
