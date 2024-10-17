@@ -63,9 +63,7 @@
                             <label for="start_date" class="form-label">Start Date:</label>
                             <input type="date" name="start_date" id="start_date"
                                 value="{{ old('start_date', Carbon\Carbon::now()->format('Y-m-d')) }}"
-                                class="form-control @error('start_date')
-is-invalid
-@enderror">
+                                class="form-control @error('start_date') is-invalid @enderror">
                             @error('start_Date')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
