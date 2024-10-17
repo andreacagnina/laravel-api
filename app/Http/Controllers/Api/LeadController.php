@@ -29,7 +29,7 @@ class LeadController extends Controller
         } else {
             return response()->json([
                 'success' => false,
-                'error' => 'Fail'
+                'errors' => 'Fail'
             ]);
         }
     }
