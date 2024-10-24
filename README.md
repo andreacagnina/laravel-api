@@ -1,64 +1,40 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+Project Management System 🚀
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Benvenuto nel Project Management System, una piattaforma di gestione progetti creata con Laravel, che consente la creazione, modifica e gestione di progetti, tipi e tecnologie, con relazioni dinamiche tra di essi. Questo sistema include autenticazione, invio email tramite lead, e un'integrazione con Vue.js per la visualizzazione dei dati tramite API.
+Descrizione del Progetto
 
-## About Laravel
+Questo progetto permette di gestire progetti, associandoli a specifici tipi e a più tecnologie. Le relazioni tra le entità sono gestite tramite le seguenti logiche:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+    La relazione Project - Type è di tipo one-to-many.
+    La relazione Project - Technologies è di tipo many-to-many.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+I dati di base sono stati generati utilizzando Faker, e sono presenti operazioni CRUD per la gestione completa delle entità.
+Funzionalità principali
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    Gestione Progetti (CRUD): Crea, visualizza, modifica ed elimina i progetti dal database.
 
-## Learning Laravel
+    Gestione Tipi (CRUD): Crea e associa vari tipi di progetti. Ogni progetto può appartenere a un singolo tipo.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    Gestione Tecnologie (CRUD): Crea e gestisci tecnologie utilizzate nei progetti. Ogni progetto può essere associato a più tecnologie.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    Relazioni dinamiche:
+        One-to-Many: Un progetto può appartenere a un solo tipo, ma un tipo può essere associato a più progetti.
+        Many-to-Many: Ogni progetto può utilizzare più tecnologie, e ogni tecnologia può essere associata a più progetti.
 
-## Laravel Sponsors
+    Seeder Faker: I database di tipi, tecnologie e progetti sono stati popolati usando Faker per generare dati di esempio.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+    API Controller: Un'API RESTful è stata sviluppata per esporre i dati dei progetti a Vue.js, che viene utilizzato per la gestione dinamica del frontend.
 
-### Premium Partners
+    Autenticazione: Il sistema include una sezione autenticata per proteggere determinate funzionalità. Gli utenti devono essere registrati e autenticati per poter accedere alla gestione dei progetti.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    Lead per Email: È stata implementata una funzionalità di gestione dei lead con invio di email, permettendo la raccolta e l'invio di email per contatti e altre interazioni.
 
-## Contributing
+Tecnologie Utilizzate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    Laravel: Framework backend per la gestione delle funzionalità principali.
+    Vue.js: Utilizzato per il rendering dinamico dei dati tramite l'API.
+    Blade: Motore di template utilizzato per creare le viste.
+    MySQL: Database utilizzato per la persistenza dei dati.
+    Faker: Libreria per la generazione di dati casuali utilizzata nei seeder.
+    Authentication: Sistema di autenticazione di Laravel per proteggere determinate sezioni.
+    Mail: Sistema di gestione delle email con lead integrato.
